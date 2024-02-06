@@ -4,6 +4,7 @@ import ContactPageVue from "@/pages/ContactPage.vue"
 import HomePageVue from "@/pages/HomePage.vue"
 import PageNotFoundVue from "@/pages/PageNotFound.vue"
 import ServicesPageVue from "@/pages/ServicesPage.vue"
+import EmployeePage from '@/pages/EmployeePage.vue'
 import { createWebHistory, createRouter } from "vue-router"
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
         path: '/contact',
         name: 'ContactPage',
         component: <ContactPageVue />
+    },
+    {
+        path: '/employee',
+        name: 'EmployeePage',
+        component: <EmployeePage />
     },
     {
         path: '/services',

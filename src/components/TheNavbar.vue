@@ -37,6 +37,10 @@
             class="text-gray-800 text-sm hover:font-medium md:mx-4"
           >Blogs</router-link>
           <router-link
+            to="/employee"
+            class="text-gray-800 text-sm hover:font-medium md:mx-4"
+          >Employee</router-link>
+          <router-link
             to="/contact"
             class="text-gray-800 text-sm hover:font-medium md:mx-4"
           >Contact</router-link>
