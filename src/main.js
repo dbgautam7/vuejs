@@ -1,3 +1,4 @@
+
 import { createApp } from 'vue';
 import App from './App.vue';
 import store from './store';
@@ -5,6 +6,7 @@ import './index.css'
 import router from './routes';
 import axios from 'axios';
 import VueSocialSharing from 'vue-social-sharing'
+import { vfmPlugin } from 'vue-final-modal'
 
 axios.defaults.baseURL = 'https://vue-completecourse.firebaseio.com/';
 
@@ -13,5 +15,6 @@ app.config.productionTip = false;
 app.use(store);
 app.use(VueSocialSharing)
 app.use(router)
+app.use(vfmPlugin)
 
 app.mount('#app');

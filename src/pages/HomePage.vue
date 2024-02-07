@@ -3,6 +3,7 @@
     <h1> Welcome to Home page </h1>
     <MyTodoForm />
     <MyTodoList />
+    <DeleteModal />
   </div>
 </template>
 
@@ -14,7 +15,7 @@ export default {
   name: 'HomePage',
   components: {
     MyTodoList,
-    MyTodoForm
+    MyTodoForm,
   },
 };
 </script>

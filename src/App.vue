@@ -2,7 +2,7 @@
 <template>
   <div id="app">
     <TheNavbar />
-    <div class="container mx-auto mt-12 mb-28">
+    <div class="container mx-auto mt-16 mb-28">
       <router-view />
     </div>
     <TheFooter />
@@ -16,8 +16,11 @@ export default {
   name: 'App',
   components: {
     TheNavbar,
-    TheFooter
+    TheFooter,
   },
 }
 </script>
+
+
+
 

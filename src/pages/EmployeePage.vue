@@ -3,12 +3,8 @@ import { h } from 'vue'
 import { format } from 'date-fns'
 import EditIcon from '@/icons/EditIcon.vue';
 import DeleteIcon from '@/icons/DeleteIcon.vue';
-
-// import TableOriginal from '@/components/TableOriginal.vue'
 import CustomTable from '@/components/table/CustomTable.vue';
 import people from '../dummyPeople.json'
-
-
 
 const columns = [
   {

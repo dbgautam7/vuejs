@@ -1,11 +1,14 @@
 
-import BlogPageVue from "@/pages/BlogPage.vue"
+import BlogPageVue from "@/pages/blog/BlogPage.vue"
 import ContactPageVue from "@/pages/ContactPage.vue"
 import HomePageVue from "@/pages/HomePage.vue"
 import PageNotFoundVue from "@/pages/PageNotFound.vue"
 import ServicesPageVue from "@/pages/ServicesPage.vue"
 import EmployeePage from '@/pages/EmployeePage.vue'
+import TheBlogFormVue from "@/pages/blog/TheBlogForm.vue"
 import { createWebHistory, createRouter } from "vue-router"
+
+
 
 const routes = [
     {
@@ -16,7 +19,12 @@ const routes = [
     {
         path: '/blogs',
         name: 'BlogPage',
-        component: <BlogPageVue />
+        component: <BlogPageVue />,
+    },
+    {
+        path: '/blogs/create',
+        name: 'TheBlogFormVue',
+        component: <TheBlogFormVue />
     },
     {
         path: '/contact',
