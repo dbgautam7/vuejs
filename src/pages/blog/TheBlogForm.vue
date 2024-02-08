@@ -26,6 +26,14 @@
         v-model="description"
       ></textarea>
     </div>
+    <v-select
+      :options="selectItems"
+      :label="label"
+      v-model="type"
+      :reduce="(option) => option.value"
+      multiple
+      placeholder="Select a type"
+    ></v-select>
     <div class="flex justify-end">
       <button
         type="submit"
@@ -35,36 +43,44 @@
       </button>
     </div>
   </form>
-
 </template>
-  
-  <script>
- import axios from 'axios';
-  export default {
-    name:"BlogForm",
-      data() {
-          return {
-              title: '',
-              description: '',
-              topic:''
-          };
-      },
-  
-      methods: {
-          onCreatePost() {
+
+<script>
+import axios from 'axios';
+export default {
+    name: "BlogForm",
+    data() {
+        return {
+            selectItems: [{
+                label: "Public",
+                value: "public"
+            }, {
+                label: "Private",
+                value: "private"
+            }],
+            title: '',
+            description: '',
+            topic: '',
+            type: []
+        };
+    },
+
+    methods: {
+        onCreatePost() {
             axios.post(`posts.json`, {
-                  title: this.title,
-                  description: this.description,
-                  topic:this.topic
-              }).then((response) => {
-                if(response.status===200){
-                  this.title=""
-                this.description=""
-                this.topic=""
+                title: this.title,
+                description: this.description,
+                topic: this.topic,
+                type: this.type
+            }).then((response) => {
+                if (response.status === 200) {
+                    this.title = ""
+                    this.description = ""
+                    this.topic = ""
+                    this.type = []
                 }
-              });
-          },
-      },
-  };
-  </script>
-  
+            });
+        },
+    },
+};
+</script>

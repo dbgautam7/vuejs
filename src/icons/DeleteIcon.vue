@@ -1,37 +1,30 @@
 <script>
-
 export default {
-  props: {
-    width: {
-      default: 20
+    props: {
+        width: {
+            default: 20
+        },
+        height: {
+            default: 20
+        },
+        iconColor: {
+            default: 'red'
+        },
+        id: {
+            type: Number,
+        },
+        openDeleteModal:{
+          type:Function
+        }, 
     },
-    height: {
-      default: 20
-    },
-    iconColor: {
-      default: 'red'
-    },
-    id:{
-        type:Number,
-    },
-  },
-  methods: {
-    openDeleteModal() {
-      console.log(this.id, "idddd")
-      this.$emit('delete', this.id);
-    }
-  },
-  mounted(){
-    console.log(this?.id, "props")
-  }
+  
 }
 </script>
-
 
 <template>
   <div
     class="cursor-pointer"
-    @click="openDeleteModal"
+    v-on:click="this.openDeleteModal"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

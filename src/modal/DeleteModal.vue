@@ -1,10 +1,10 @@
 <template>
   <div>
-    <button @click="showModal = true">
+    <button @click="openDeleteModal">
       Simple
     </button>
     <vue-final-modal
-      v-model="showModal"
+      :v-model="this.showDeleteModal"
       classes="flex justify-center items-center"
       content-class="relative bg-[#fff] rounded w-1/2 max-h-[300px] p-4 overflow-auto"
     >
@@ -15,7 +15,7 @@
       </p>
       <button
         class="absolute top-0 right-0 flex justify-center items-center w-8 h-8 mt-2 mr-2 cursor-pointer hover:bg-gray-300"
-        @click="showModal = false"
+        :v-on:click="showDeleteModal"
       >
         x
       </button>
@@ -24,9 +24,21 @@
 </template>
     <script>
     export default {
-      data: () => ({
-        showModal: true
-      }),
+      props:{
+        showDeleteModal:Boolean
+      },
+      mounted(){
+        console.log(this.showDeleteModal);
+      }
+      // data: () => ({
+      //   showDeleteModal: Boolean
+      // }),
+      // methods:{
+      //   openDeleteModal(){
+      //     this.showDeleteModal=true
+      //   }
+      // }
+    
     };
     </script>
   
